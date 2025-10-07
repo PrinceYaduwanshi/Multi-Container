@@ -17,19 +17,19 @@ jobs:
 
       - name: Build and test React client
         run: |
-          docker build -t prince/react-test -f ./client/Dockerfile.dev ./client
-          docker run -e CI=true prince/react-test npm test
+          docker build -t vastavikprince/react-test -f ./client/Dockerfile.dev ./client
+          docker run -e CI=true vastavikprince/react-test npm test
 
       - name: Build all Docker images
         run: |
-          docker build -t prince/multi-client ./client
-          docker build -t prince/multi-nginx ./nginx
-          docker build -t prince/multi-server ./server
-          docker build -t prince/multi-worker ./worker
+          docker build -t vastavikprince/multi-client ./client
+          docker build -t vastavikprince/multi-nginx ./nginx
+          docker build -t vastavikprince/multi-server ./server
+          docker build -t vastavikprince/multi-worker ./worker
 
       - name: Push all Docker images
         run: |
-          docker push prince/multi-client
-          docker push prince/multi-nginx
-          docker push prince/multi-server
-          docker push prince/multi-worker
+          docker push vastavikprince/multi-client
+          docker push vastavikprince/multi-nginx
+          docker push vastavikprince/multi-server
+          docker push vastavikprince/multi-worker
