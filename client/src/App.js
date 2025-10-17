@@ -20,7 +20,7 @@ function App() {
           >
             Learn React
           </a>
-          <h1>Fib Calculator version 2 for K8S</h1>
+          <h1>Fib Calculator version</h1>
           <Link to="/">Home</Link>
           <Link to="/otherpage">Other Page</Link>
         </header>
